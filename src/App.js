@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Countdown from 'react-countdown';
+import {CircularProgressbar} from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import './App.scss';
+
+const renderer = ({days, hours, minutes, seconds}) => {
+  return (
+    <div className="App-countdown">
+      <CircularProgressbar maxValue={365} minValue={0} value={365-days} text={days.toString().padStart(1,'0')} />
+      <CircularProgressbar maxValue={24} minValue={0} value={24-hours} text={hours.toString().padStart(1,'0')} />
+      <CircularProgressbar maxValue={60} minValue={0} value={60-minutes} text={minutes.toString().padStart(1,'0')} />
+      <CircularProgressbar maxValue={60} minValue={0} value={60-seconds} text={seconds.toString().padStart(1,'0')} />
+    </div>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-container">
+        <Countdown date={new Date("January 11 2020 00:00")} renderer={renderer} />
+      </div>
     </div>
   );
 }

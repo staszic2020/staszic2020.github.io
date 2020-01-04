@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import WebFont from 'webfontloader';
+WebFont.load({
+    google: {
+        families: ['Alegreya Sans', 'Roboto Slab']
+    }
+});
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
