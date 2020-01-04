@@ -1,6 +1,6 @@
-$color: #05CE7C;
+$color: #00C666;
 $color-accent: #009D66;
-$color-active: $color;
+$color-active: #05CE7C;
 $color-inactive: #F2F2F2;
 $color-background: #fff;
 /* colors 
@@ -9,7 +9,9 @@ $color-background: #fff;
 .App {
   text-align: center;
 }
-
+html, body {
+  background-color: $color-background;
+}
 .App-container {
   background-color: $color-background;
   min-height: 100vh;
@@ -24,28 +26,30 @@ $color-background: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 2vw;
+  margin: 10px;
   .CircularProgressbar-path {
     stroke: $color-active;
-    stroke-linecap: butt;
+    stroke-linecap: butt;    
+    // transition: stroke-dashoffset 1s linear 0s;
   }
   .CircularProgressbar-trail {
     stroke: $color-inactive;
-  }
-  .CircularProgressbar-value {
-    font-size: 7vw;
-    color: $color-accent;
-    // font-weight: bold;
   }
   .CircularProgressbar-text {
     fill: $color-accent;
     font-size: 2.2em;
     font-weight: 600;
   }
-  .CircularProgressbar-label {
-    font-size: 3vw;
-    color: $color;
-    position: absolute;
-    bottom: 3vw;
+}
+
+.App-header {
+  color: $color-accent;
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 40px;
+  @media (min-width: 768px) {
+    font-size: 120px;
   }
 }
 

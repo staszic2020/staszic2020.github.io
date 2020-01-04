@@ -19,6 +19,9 @@ function App() {
   return (
     <div className="App">
       <div className="App-container">
+        <div className="App-header">
+          Stay tuned!
+        </div>
         <Countdown date={new Date("January 11 2020 00:00")} renderer={renderer} />
       </div>
     </div>
