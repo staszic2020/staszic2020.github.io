@@ -3,8 +3,8 @@
   "name": "Staszic 2020",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
+  "theme_color": "#05CE7C",
+  "background_color": "#DFF299",
   "icons": [
     {
     "src": "favicon.ico",
