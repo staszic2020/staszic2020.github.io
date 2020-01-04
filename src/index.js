@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import WebFont from 'webfontloader';
 WebFont.load({
     google: {
-        families: ['Montserrat', 'Alegreya Sans', 'Roboto Slab', 'Quattrocento']
+        families: ['Montserrat']
     }
 });
 ReactDOM.render(<App />, document.getElementById('root'));
