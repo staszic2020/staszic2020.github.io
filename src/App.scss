@@ -1,0 +1,50 @@
+$color: #05CE7C;
+$color-accent: #009D66;
+$color-active: $color;
+$color-inactive: #F2F2F2;
+$color-background: #fff;
+/* colors 
+#05CE7C, #DFF299, #00C666, #00AF66, #009D66, #F2F2F2 
+*/
+.App {
+  text-align: center;
+}
+
+.App-container {
+  background-color: $color-background;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-countdown {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 2vw;
+  .CircularProgressbar-path {
+    stroke: $color-active;
+    stroke-linecap: butt;
+  }
+  .CircularProgressbar-trail {
+    stroke: $color-inactive;
+  }
+  .CircularProgressbar-value {
+    font-size: 7vw;
+    color: $color-accent;
+    // font-weight: bold;
+  }
+  .CircularProgressbar-text {
+    fill: $color-accent;
+    font-size: 2.2em;
+  }
+  .CircularProgressbar-label {
+    font-size: 3vw;
+    color: $color;
+    position: absolute;
+    bottom: 3vw;
+  }
+}
+
